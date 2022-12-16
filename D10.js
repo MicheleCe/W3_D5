@@ -104,7 +104,7 @@ function onlyLetters(string) {
   }
   return result
 }
-console.log(onlyLetters("I have 4 dogs"));
+console.log(onlyLetters("I bcbcvb77776h7have 999 dogs"));
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -348,12 +348,12 @@ Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come param
 
 function searchAndDivide(obj, string) {
   const objMatch = obj.filter(obj => obj.Title.toLowerCase().includes(string))
-  const objUnmatch =  obj.filter(obj => obj.Title.toLowerCase() !== string)
+  const objUnmatch =  obj.filter(obj => !obj.Title.toLowerCase().includes(string))
   const match = []
   const unmatch = []
   objMatch.forEach((title) => {match.push(title)})
   objUnmatch.forEach((title) => {unmatch.push(title)})
-  return match 
+  return unmatch 
 }
 console.log(searchAndDivide(movies, "avengers"))
 /* ESERCIZIO 19
