@@ -306,10 +306,15 @@ console.log(deleteProp(movies[0], 'Poster'));
 /* ESERCIZIO 12
 Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
-function newestMovie(){
-
+function newestMovie(obj) {
+  let movYears = obj.map((x)=> x.Year).sort().reverse();
+  for (let i = 0; i < obj.length; i++) {
+      if (obj[i].Year === movYears[0]){
+      return obj[i]}   
+  }
 }
 console.log(newestMovie(movies));
+
 /* ESERCIZIO 13
 Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
@@ -321,21 +326,23 @@ console.log(countMovies(movies));
 Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 function onlyTheYears(obj){
-  return obj.map((x)=> x.Year);
+  const movYear = obj.map((x)=> x.Year);
+  return movYear
 }
 console.log(onlyTheYears(movies));
 /* ESERCIZIO 15
 Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
-function onlyInLastMillennium(){
-  let lastMill = []
+function onlyInLastMillennium (obj){
+  let latestMill = []
   for (let i = 0; i < obj.length; i++) {
     if (obj[i].Year > 2000) {
-      lastMill.push(obj[i])
+      latestMill.push(obj[i])
     }
   }
+  return latestMill
 }
-console.log(newestMovie(movies));
+console.log(onlyInLastMillennium(movies));
 /* ESERCIZIO 16
 Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
