@@ -155,10 +155,10 @@ function howManyDays(date2) {
   date2 = new Date(date2)
   const todayDate = new Date();
   const diffTime = Math.abs(date2 - todayDate);
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+  const diffDays = diffTime / (1000 * 60 * 60 * 24); 
   return diffDays + " days";
 }
-console.log(howManyDays("12/10/1996"));
+console.log(howManyDays("12/24/1996"));
 
 
 /* ESERCIZIO 10
