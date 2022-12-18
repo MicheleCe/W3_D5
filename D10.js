@@ -66,7 +66,6 @@ function whoIsBigger (num3, num4){
   if(num3 > num4) {return num3}
   else {return num4}
 }
-whoIsBigger(10, 7)
 console.log(whoIsBigger(90, 7));
 
 /* ESERCIZIO 3
@@ -108,17 +107,17 @@ console.log(onlyLetters("I bcbcvb77776h7have 999 dogs"));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 function isThisAnEmail(emString){
-  if (emString.includes("@" && "." && ".it") && !emString.includes(" ")){return true}
+  if (emString.includes("@" && "." && ".it" && ".com") && !emString.includes(" ")){
+    return true}
   else {return false}
 }
-
 console.log(isThisAnEmail("njcsdom@dsbvfs.com"));
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 function whatDayIsIt() {
   const d = new Date();
-  return day = (d.getDay())
+  return day = (d.getDay()+1)
 }
 console.log(whatDayIsIt());
 
