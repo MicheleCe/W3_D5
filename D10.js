@@ -49,17 +49,16 @@ console.log(me);
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 me.skills.pop()
-
 console.log(me);
-
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
-let randomNumu1 = Math.floor(Math.random()*5)+1
-console.log(randomNumu1);
-
+function dice (){
+  return Math.floor(Math.random()*6)+1
+}
+console.log(dice());
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
@@ -109,7 +108,7 @@ console.log(onlyLetters("I bcbcvb77776h7have 999 dogs"));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 function isThisAnEmail(emString){
-  if (emString.includes("@" && ".") && !emString.includes(" ")){return true}
+  if (emString.includes("@" && "." && ".it") && !emString.includes(" ")){return true}
   else {return false}
 }
 
@@ -119,7 +118,7 @@ console.log(isThisAnEmail("njcsdom@dsbvfs.com"));
 */
 function whatDayIsIt() {
   const d = new Date();
-  return day = d.getDay()
+  return day = (d.getDay())
 }
 console.log(whatDayIsIt());
 
@@ -135,22 +134,44 @@ console.log(whatDayIsIt());
       values: [3, 3, 4]
   }
 */
-
-
-////////////////////??????????????????????????????????????????????????????????????
-function rollTheDices (num) {
-  const dice = (num)
+function rollTheDices(tiridemarmellata) {
+  let oggetto = {
+    sum: 0,
+    values: [],
+  } 
+  for (let i = 0; i < tiridemarmellata; i++) {
+    let randomNum = dice()
+    oggetto.values.push(randomNum)
+    oggetto.sum += randomNum;
+  }
+  return oggetto
 }
+console.log(rollTheDices(2));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+function howManyDays(date2) {
+  date2 = new Date(date2)
+  const todayDate = new Date();
+  const diffTime = Math.abs(date2 - todayDate);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+  return diffDays + " days";
+}
+console.log(howManyDays("12/10/1996"));
 
 
 /* ESERCIZIO 10
 Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+function isTodayMyBirthday(data) {
+  const myBd = new Date("12/10/1996");
+  const enteredDate = new Date (data);
+  if (myBd.getTime() === enteredDate.getTime()){return true}
+  else {return false}
+}
+console.log(isTodayMyBirthday("12/10/1996"));
 
 // Arrays & Oggetti
 
@@ -390,7 +411,6 @@ Scrivi una funzione per aggiungere un background di colore rosso a ogni link all
 */
 const allUl = document.querySelectorAll("ul")
 allUl.forEach((newCol) => {newCol.style.backgroundColor = "red"})
-
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
