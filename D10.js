@@ -165,12 +165,12 @@ console.log(howManyDays("12/10/1996"));
 Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 function isTodayMyBirthday(data) {
-  const myBd = new Date("12/10/1996");
+  const myBd = new Date("12/24/96");
   const enteredDate = new Date (data);
   if (myBd.getTime() === enteredDate.getTime()){return true}
   else {return false}
 }
-console.log(isTodayMyBirthday("12/10/1996"));
+console.log(isTodayMyBirthday("12/24/96"));
 
 // Arrays & Oggetti
 
