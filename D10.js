@@ -357,7 +357,6 @@ console.log(sumAllTheYears(movies));
 Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 function searchByTitle (obj, string){
-
    return obj.filter(obj => obj.Title.toLowerCase().includes(string))
 }
 console.log(searchByTitle(movies, "lord of"));
