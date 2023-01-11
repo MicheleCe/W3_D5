@@ -423,7 +423,7 @@ Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 
 const ulList = document.getElementById("myList")
 while (ulList.hasChildElements()) {
-  ulList.removeChild(box.lastChild)
+  ulList.removeChild(ulList.lastChild)
 }
 
 /* ESERCIZIO 26
