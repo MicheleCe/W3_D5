@@ -413,9 +413,10 @@ allUl.forEach((newCol) => {newCol.style.backgroundColor = "red"})
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-let li = document.createElement('li')
-li.innerText = text; 
-document.getElementById('myList').appendChild(li);
+let ulist = document.createElement('ul')
+ulList.setAttribute("id","myList");
+let list = document.createElement('li')
+document.getElementById('myList').appendChild(ulLlistist);
 
 /* ESERCIZIO 25
 Scrivi una funzione per svuotare la lista non ordinata con id "myList".
