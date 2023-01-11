@@ -413,8 +413,8 @@ allUl.forEach((newCol) => {newCol.style.backgroundColor = "red"})
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-let ulist = document.createElement('ul')
-ulist.setAttribute("id","myList");
+let unlist = document.createElement('ul')
+unlist.setAttribute("id","myList");
 let list = document.createElement('li')
 document.getElementById('myList').appendChild(list);
 
