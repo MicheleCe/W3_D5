@@ -408,7 +408,7 @@ allTD.forEach((text) => {console.log(text.innerText);})
 /* ESERCIZIO 23
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-const allUl = document.querySelectorAll("ul")
+const allUl = document.querySelectorAll("a")
 allUl.forEach((newCol) => {newCol.style.backgroundColor = "red"})
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
